@@ -14,6 +14,8 @@
 		C718DBFC2399583A0047CE5E /* NotasCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C718DBFA2399583A0047CE5E /* NotasCoreData.xcdatamodeld */; };
 		C718DBFE2399583C0047CE5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C718DBFD2399583C0047CE5E /* Assets.xcassets */; };
 		C718DC012399583C0047CE5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C718DBFF2399583C0047CE5E /* LaunchScreen.storyboard */; };
+		C77182C22399684B00CFE8FE /* ListaNotasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77182C12399684B00CFE8FE /* ListaNotasController.swift */; };
+		C77182C4239989BB00CFE8FE /* GestorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77182C3239989BB00CFE8FE /* GestorPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C718DBFD2399583C0047CE5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C718DC002399583C0047CE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C718DC022399583C0047CE5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C77182C12399684B00CFE8FE /* ListaNotasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaNotasController.swift; sourceTree = "<group>"; };
+		C77182C3239989BB00CFE8FE /* GestorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestorPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				C718DBFF2399583C0047CE5E /* LaunchScreen.storyboard */,
 				C718DC022399583C0047CE5E /* Info.plist */,
 				C718DBFA2399583A0047CE5E /* NotasCoreData.xcdatamodeld */,
+				C77182C12399684B00CFE8FE /* ListaNotasController.swift */,
+				C77182C3239989BB00CFE8FE /* GestorPicker.swift */,
 			);
 			path = NotasCoreData;
 			sourceTree = "<group>";
@@ -143,8 +149,10 @@
 			files = (
 				C718DBF62399583A0047CE5E /* ViewController.swift in Sources */,
 				C718DBF22399583A0047CE5E /* AppDelegate.swift in Sources */,
+				C77182C22399684B00CFE8FE /* ListaNotasController.swift in Sources */,
 				C718DBFC2399583A0047CE5E /* NotasCoreData.xcdatamodeld in Sources */,
 				C718DBF42399583A0047CE5E /* SceneDelegate.swift in Sources */,
+				C77182C4239989BB00CFE8FE /* GestorPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

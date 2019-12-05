@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Libreta" representedClassName="Libreta" syncable="YES" codeGenerationType="class">
+        <attribute name="nombre" optional="YES" attributeType="String"/>
+        <relationship name="notas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Nota" inverseName="libreta" inverseEntity="Nota"/>
+    </entity>
+    <entity name="Nota" representedClassName="Nota" syncable="YES" codeGenerationType="class">
+        <attribute name="fecha" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="texto" optional="YES" attributeType="String" minValueString="1"/>
+        <relationship name="libreta" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Libreta" inverseName="notas" inverseEntity="Libreta"/>
+    </entity>
+    <elements>
+        <element name="Libreta" positionX="-63" positionY="0" width="128" height="73"/>
+        <element name="Nota" positionX="-63" positionY="-18" width="128" height="88"/>
+    </elements>
 </model>
