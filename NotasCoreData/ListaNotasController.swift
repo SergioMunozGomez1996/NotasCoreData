@@ -9,12 +9,28 @@
 import UIKit
 import CoreData
 
-class ListaNotasController: UITableViewController {
+class ListaNotasController: UITableViewController, UISearchResultsUpdating {
     
-    var listaNotas : [Nota]!
+     var listaNotas : [Nota]!
+    
+    //esto debe ser una variable miembro de ListaNotasController
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    let throttler = Throttler(minimumDelay: 0.5)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //iOS intentará pintar la tabla, hay que inicializarla aunque sea vacía
+        self.listaNotas = []
+        //ListaNotasController recibirá lo que se está escribiendo en la barra de búsqueda
+        searchController.searchResultsUpdater = self
+        //Configuramos el search controller
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Buscar texto"
+        //Lo añadimos a la tabla
+        searchController.searchBar.sizeToFit()
+        self.tableView.tableHeaderView = searchController.searchBar
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -63,8 +79,36 @@ class ListaNotasController: UITableViewController {
         cell.textLabel?.text = self.listaNotas[indexPath.row].texto
         cell.detailTextLabel?.text = self.listaNotas[indexPath.row].libreta?.nombre
         
-        //return
         return cell
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        throttler.throttle {
+            
+            let texto = searchController.searchBar.text!
+            
+            if(texto != ""){
+                self.listaNotas.removeAll()
+                let miDelegate = UIApplication.shared.delegate as! AppDelegate
+                let miContexto = miDelegate.persistentContainer.viewContext
+                let request = NSFetchRequest<Nota>(entityName: "Nota")
+                
+                //las notas aparezcen en orden inverso por fecha, de más reciente a más antigua.
+                let credSort = NSSortDescriptor(key:"fecha", ascending:false)
+                request.sortDescriptors = [credSort]
+                
+                let pred = NSPredicate(format: "texto CONTAINS[cd] %@", argumentArray:[texto])
+                request.predicate = pred
+                let resultados = try! miContexto.fetch(request)
+                for nota in resultados {
+                    self.listaNotas.append(nota)
+                }
+                
+                self.tableView.reloadData()
+            }
+            
+        }
     }
     
 
