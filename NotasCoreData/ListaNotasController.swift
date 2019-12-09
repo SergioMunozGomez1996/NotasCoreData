@@ -63,6 +63,7 @@ class ListaNotasController: UITableViewController {
         cell.textLabel?.text = self.listaNotas[indexPath.row].texto
         cell.detailTextLabel?.text = self.listaNotas[indexPath.row].libreta?.nombre
         
+        //return
         return cell
     }
     
