@@ -17,6 +17,8 @@
 		C77182C22399684B00CFE8FE /* ListaNotasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77182C12399684B00CFE8FE /* ListaNotasController.swift */; };
 		C77182C4239989BB00CFE8FE /* GestorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77182C3239989BB00CFE8FE /* GestorPicker.swift */; };
 		C774B7AD239EAAB20057BF64 /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C774B7AC239EAAB20057BF64 /* Throttler.swift */; };
+		C774B7AF239EBD820057BF64 /* ListaNotasCDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C774B7AE239EBD820057BF64 /* ListaNotasCDController.swift */; };
+		C774B7B1239EC74F0057BF64 /* Nota.swift in Sources */ = {isa = PBXBuildFile; fileRef = C774B7B0239EC74F0057BF64 /* Nota.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		C77182C12399684B00CFE8FE /* ListaNotasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaNotasController.swift; sourceTree = "<group>"; };
 		C77182C3239989BB00CFE8FE /* GestorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestorPicker.swift; sourceTree = "<group>"; };
 		C774B7AC239EAAB20057BF64 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
+		C774B7AE239EBD820057BF64 /* ListaNotasCDController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaNotasCDController.swift; sourceTree = "<group>"; };
+		C774B7B0239EC74F0057BF64 /* Nota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nota.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				C77182C12399684B00CFE8FE /* ListaNotasController.swift */,
 				C77182C3239989BB00CFE8FE /* GestorPicker.swift */,
 				C774B7AC239EAAB20057BF64 /* Throttler.swift */,
+				C774B7AE239EBD820057BF64 /* ListaNotasCDController.swift */,
+				C774B7B0239EC74F0057BF64 /* Nota.swift */,
 			);
 			path = NotasCoreData;
 			sourceTree = "<group>";
@@ -154,6 +160,8 @@
 				C718DBF22399583A0047CE5E /* AppDelegate.swift in Sources */,
 				C774B7AD239EAAB20057BF64 /* Throttler.swift in Sources */,
 				C77182C22399684B00CFE8FE /* ListaNotasController.swift in Sources */,
+				C774B7AF239EBD820057BF64 /* ListaNotasCDController.swift in Sources */,
+				C774B7B1239EC74F0057BF64 /* Nota.swift in Sources */,
 				C718DBFC2399583A0047CE5E /* NotasCoreData.xcdatamodeld in Sources */,
 				C718DBF42399583A0047CE5E /* SceneDelegate.swift in Sources */,
 				C77182C4239989BB00CFE8FE /* GestorPicker.swift in Sources */,

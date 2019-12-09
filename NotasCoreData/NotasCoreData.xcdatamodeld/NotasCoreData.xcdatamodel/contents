@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Libreta" representedClassName="Libreta" syncable="YES" codeGenerationType="class">
         <attribute name="nombre" optional="YES" attributeType="String"/>
-        <relationship name="notas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Nota" inverseName="libreta" inverseEntity="Nota"/>
+        <relationship name="notas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Nota" inverseName="libreta" inverseEntity="Nota"/>
     </entity>
     <entity name="Nota" representedClassName="Nota" syncable="YES" codeGenerationType="class">
         <attribute name="fecha" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
